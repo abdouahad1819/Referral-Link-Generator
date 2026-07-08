@@ -11,46 +11,46 @@ const filters = [
 
 const videos = [
   {
-    id: 'M_CVtS0DLII',
+    id: 'BNG_eoV7Ewg',
     cat: 'processes',
     badge: 'العمليات',
-    title: 'Coastal Processes',
-    desc: 'فيديو تعليمي يشرح عمليات الشاطئ والأمواج وكيفية انتقال الرواسب.'
+    title: 'Landforms of Coastal Erosion',
+    desc: 'مراجعة شاملة للأشكال الأرضية الناتجة عن عمليات التآكل الساحلي وكيف تتطور.'
   },
   {
-    id: 'YMBioqGgJeE',
+    id: 'QEZEjbvl_m4',
     cat: 'processes',
     badge: 'العمليات',
-    title: 'Longshore Drift',
-    desc: 'شرح الانجراف الساحلي الطولي بالصور والرسوم وكيف ينقل الرمال بمحاذاة الشاطئ.'
+    title: 'Longshore Drift Explained',
+    desc: 'شرح الانجراف الساحلي الطولي بالصور والرسوم التوضيحية — كيف ينقل الأمواجُ الرمالَ بمحاذاة الشاطئ.'
   },
   {
-    id: '47LkM2mKMhg',
+    id: 'AA2MC3WC1mw',
     cat: 'landforms',
     badge: 'التضاريس',
     title: 'Coastal Landforms',
-    desc: 'نظرة شاملة على أشكال التضاريس الساحلية المختلفة وكيف تتكون.'
+    desc: 'نظرة شاملة على أشكال التضاريس الساحلية التآكلية والترسيبية: الرؤوس البحرية، الجروف، الأقواس، الحواجز.'
   },
   {
-    id: 'aFoVL0RA0Is',
+    id: 'oD9GRPXAgVM',
     cat: 'landforms',
     badge: 'التضاريس',
-    title: 'Sea Cliffs and Stacks',
-    desc: 'كيف تتشكل وتتطور الجروف البحرية والأقواس والإبر الصخرية عبر الزمن.'
+    title: 'Cliffs, Arches, Stacks & Spits',
+    desc: 'كيف تتشكل وتتطور الجروف البحرية والأقواس والإبر الصخرية والألسنة الرملية عبر الزمن الجيولوجي.'
   },
   {
-    id: 'vP8MxjuGpLw',
+    id: 'QH-KYmRAzOA',
     cat: 'climate',
     badge: 'المناخ',
-    title: 'Sea Level Rise Explained',
-    desc: 'شرح مبسط لظاهرة ارتفاع مستوى البحر وأسبابها وتأثيراتها المستقبلية.'
+    title: 'What Causes Sea Level Rise?',
+    desc: 'شرح علمي مبسط لأسباب ارتفاع مستوى البحر — ذوبان الجليد وتمدد المياه الحرارية والتأثيرات المستقبلية.'
   },
   {
-    id: 'mZnTF_nfMWY',
+    id: 'y6WbzkI17k0',
     cat: 'climate',
     badge: 'المناخ',
-    title: 'Coastal Erosion',
-    desc: 'التآكل الساحلي وأسبابه وتداعياته على المجتمعات البشرية والبيئة.'
+    title: 'Coastal Erosion – Reshaping Our Coastline',
+    desc: 'التآكل الساحلي وكيف يُعيد تشكيل الخطوط الساحلية حول العالم وتداعياته على المجتمعات البشرية.'
   }
 ];
 
