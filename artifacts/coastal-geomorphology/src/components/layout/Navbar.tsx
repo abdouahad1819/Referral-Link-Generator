@@ -12,6 +12,7 @@ const navItems = [
   { id: 'videos', label: 'فيديوهات' },
   { id: 'review', label: 'المراجعة' },
   { id: 'book-summary', label: 'الملخص الشامل' },
+  { id: 'essays', label: 'مواضيع مقالية' },
   { id: 'quiz', label: 'اختبر معلوماتك' },
 ];
 

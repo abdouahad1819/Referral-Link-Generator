@@ -8,6 +8,7 @@ import { SeaLevel } from '@/components/sections/SeaLevel';
 import { Videos } from '@/components/sections/Videos';
 import { Review } from '@/components/sections/Review';
 import { BookSummary } from '@/components/sections/BookSummary';
+import { Essays } from '@/components/sections/Essays';
 import { Quiz } from '@/components/sections/Quiz';
 import { Footer } from '@/components/layout/Footer';
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Videos />
         <Review />
         <BookSummary />
+        <Essays />
         <Quiz />
       </main>
       <Footer />
