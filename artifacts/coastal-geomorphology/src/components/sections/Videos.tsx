@@ -6,7 +6,9 @@ const filters = [
   { id: 'all', label: 'الكل' },
   { id: 'processes', label: 'العمليات' },
   { id: 'landforms', label: 'التضاريس' },
-  { id: 'climate', label: 'المناخ' }
+  { id: 'biological', label: 'بيولوجي' },
+  { id: 'wetlands', label: 'مناطق رطبة' },
+  { id: 'climate', label: 'المناخ' },
 ];
 
 const videos = [
@@ -15,14 +17,21 @@ const videos = [
     cat: 'processes',
     badge: 'العمليات',
     title: 'Landforms of Coastal Erosion',
-    desc: 'مراجعة شاملة للأشكال الأرضية الناتجة عن عمليات التآكل الساحلي وكيف تتطور.'
+    desc: 'مراجعة شاملة للأشكال الأرضية الناتجة عن عمليات التآكل الساحلي وكيف تتطور تدريجياً.'
   },
   {
     id: 'QEZEjbvl_m4',
     cat: 'processes',
     badge: 'العمليات',
     title: 'Longshore Drift Explained',
-    desc: 'شرح الانجراف الساحلي الطولي بالصور والرسوم التوضيحية — كيف ينقل الأمواجُ الرمالَ بمحاذاة الشاطئ.'
+    desc: 'شرح الانجراف الساحلي الطولي بالرسوم التوضيحية — كيف تنقل الأمواج الرمال بمحاذاة الشاطئ.'
+  },
+  {
+    id: 'XBofnaGQQCo',
+    cat: 'processes',
+    badge: 'العمليات',
+    title: 'How Sand Dunes Form on a Coast',
+    desc: 'تكوّن الكثبان الرملية الساحلية: دور الرياح والنباتات وتراكم الرواسب في بناء الكثبان.'
   },
   {
     id: 'AA2MC3WC1mw',
@@ -39,11 +48,46 @@ const videos = [
     desc: 'كيف تتشكل وتتطور الجروف البحرية والأقواس والإبر الصخرية والألسنة الرملية عبر الزمن الجيولوجي.'
   },
   {
+    id: 'HsUevMEKEyI',
+    cat: 'landforms',
+    badge: 'التضاريس',
+    title: 'How Lagoons are Formed',
+    desc: 'تكوّن البحيرات الساحلية وأنواعها: الحواجز الرملية والشعابية وأثرها في عزل مياه هادئة غنية بالحياة.'
+  },
+  {
+    id: 'XOJsezGwcmQ',
+    cat: 'landforms',
+    badge: 'التضاريس',
+    title: 'How Estuaries Are Formed',
+    desc: 'تكوّن المصبات النهرية وكيف تتشكل منطقة التقاء المياه العذبة بالمياه المالحة وأهميتها البيئية.'
+  },
+  {
+    id: '4YiL6JRgcmk',
+    cat: 'biological',
+    badge: 'بيولوجي',
+    title: 'Mangroves – Guardians of the Coast',
+    desc: 'أشجار المانغروف: كيف تحمي السواحل من التآكل والأعاصير وتُخزّن الكربون وتحتضن آلاف الأنواع.'
+  },
+  {
+    id: 'mPA9Ze16lGw',
+    cat: 'biological',
+    badge: 'بيولوجي',
+    title: 'Coral Reef – Types and Formation',
+    desc: 'الشعاب المرجانية: أنواعها الثلاثة (الهامشية والعازلة والأتول) وآلية تكوّنها وأهميتها الجيومورفولوجية.'
+  },
+  {
+    id: 'XuaCh2kJhWQ',
+    cat: 'wetlands',
+    badge: 'مناطق رطبة',
+    title: 'Coastal Wetlands and Salt Marshes',
+    desc: 'المستنقعات الملحية الساحلية: تكوّنها ووظائفها البيئية وقدرتها على تخزين الكربون وتنقية المياه.'
+  },
+  {
     id: 'QH-KYmRAzOA',
     cat: 'climate',
     badge: 'المناخ',
     title: 'What Causes Sea Level Rise?',
-    desc: 'شرح علمي مبسط لأسباب ارتفاع مستوى البحر — ذوبان الجليد وتمدد المياه الحرارية والتأثيرات المستقبلية.'
+    desc: 'شرح علمي مبسط لأسباب ارتفاع مستوى البحر: ذوبان الجليد، التمدد الحراري، والتأثيرات المستقبلية.'
   },
   {
     id: 'y6WbzkI17k0',
@@ -57,8 +101,8 @@ const videos = [
 export function Videos() {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const filteredVideos = activeFilter === 'all' 
-    ? videos 
+  const filteredVideos = activeFilter === 'all'
+    ? videos
     : videos.filter(v => v.cat === activeFilter);
 
   return (
@@ -74,7 +118,7 @@ export function Videos() {
             فيديوهات علمية منتقاة
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            مقاطع تعليمية لفهم آليات علم الجيومورفولوجيا الساحلية بصرياً.
+            12 مقطعاً تعليمياً مُختاراً بعناية لفهم آليات علم الجيومورفولوجيا الساحلية — من العمليات الأساسية إلى الأنظمة البيئية الساحلية.
           </p>
         </motion.div>
 
@@ -86,8 +130,8 @@ export function Videos() {
               onClick={() => setActiveFilter(filter.id)}
               className={cn(
                 "px-5 py-2.5 rounded-full font-medium transition-all",
-                activeFilter === filter.id 
-                  ? "bg-primary text-primary-foreground" 
+                activeFilter === filter.id
+                  ? "bg-primary text-primary-foreground"
                   : "bg-card text-muted-foreground hover:bg-card/80 border border-border hover:text-white"
               )}
             >
@@ -120,7 +164,7 @@ export function Videos() {
                     {video.badge}
                   </div>
                 </div>
-                
+
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="text-lg font-bold text-white mb-2" dir="ltr">{video.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
