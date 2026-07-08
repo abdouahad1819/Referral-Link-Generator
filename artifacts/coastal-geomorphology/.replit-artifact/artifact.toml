@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "الجيومورفولوجيا الساحلية"
+version = "1.0.0"
+id = "artifacts/coastal-geomorphology"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23555
+
+[services.development]
+run = "pnpm --filter @workspace/coastal-geomorphology run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/coastal-geomorphology", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/coastal-geomorphology/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23555"
+BASE_PATH = "/"
