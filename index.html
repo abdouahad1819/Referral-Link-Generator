@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بوابة الجيومورفولوجيا الساحلية - دراسة علمية شاملة للأشكال الأرضية الساحلية">
+    <title>بوابة الجيومورفولوجيا الساحلية | Coastal Geomorphology Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lang-ar">
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-wave">&#127754;</div>
+        <span data-i18n="nav_logo">الجيومورفولوجيا الساحلية</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">حول</a></li>
+        <li><a href="#processes" class="nav-link" data-i18n="nav_processes">العمليات</a></li>
+        <li><a href="#landforms" class="nav-link" data-i18n="nav_landforms">التضاريس</a></li>
+        <li><a href="#sealevel" class="nav-link" data-i18n="nav_sea">مستوى البحر</a></li>
+        <li><a href="#videos" class="nav-link" data-i18n="nav_videos">فيديوهات</a></li>
+        <li><a href="#quiz" class="nav-link" data-i18n="nav_quiz">اختبار</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="ar" onclick="setLang('ar')">&#127762; AR</button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">&#127468;&#127463; EN</button>
+          <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">&#127467;&#127479; FR</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-waves">
+      <svg class="wave-svg w1" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z"/></svg>
+      <svg class="wave-svg w2" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,80 C360,20 720,100 1080,40 C1260,10 1380,80 1440,60 L1440,120 L0,120 Z"/></svg>
+      <svg class="wave-svg w3" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,40 C200,100 400,20 600,80 C800,140 1000,20 1200,70 C1320,100 1400,50 1440,70 L1440,120 L0,120 Z"/></svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero_badge">علم الأرض والمحيطات</div>
+      <h1 class="hero-title" data-i18n="hero_title">بوابة الجيومورفولوجيا الساحلية</h1>
+      <p class="hero-sub" data-i18n="hero_sub">استكشف العلم الديناميكي الذي يدرس الأشكال الأرضية الساحلية والعمليات الهائلة التي شكّلتها عبر ملايين السنين</p>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">370,000</span><span class="hstat-l" data-i18n="stat1">كيلومتر سواحل عالمية</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><span class="hstat-n">600+</span><span class="hstat-l" data-i18n="stat2">شكل ساحلي موثّق</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><span class="hstat-n">3.7mm</span><span class="hstat-l" data-i18n="stat3">ارتفاع سنوي لمستوى البحر</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#about" class="btn-primary" data-i18n="hero_cta">ابدأ الاستكشاف</a>
+        <a href="#videos" class="btn-glass" data-i18n="hero_cta2">&#9654; شاهد الفيديوهات</a>
+      </div>
+    </div>
+    <div class="scroll-hint"><div class="scroll-dot"></div></div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag" data-i18n="about_tag">المقدمة العلمية</span>
+        <h2 data-i18n="about_title">ما هي الجيومورفولوجيا الساحلية؟</h2>
+        <p data-i18n="about_lead">الفرع العلمي الذي يحلّل كيف تتشكّل السواحل وتتحوّل وتتطور</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about_p1">الجيومورفولوجيا الساحلية هي الدراسة العلمية للأشكال الأرضية الموجودة على امتداد سواحل العالم، والعمليات الجيولوجية والأوقيانوغرافية والمناخية التي تخلقها وتعدّلها باستمرار. إنها حقل متعدد التخصصات يجمع الجغرافيا الطبيعية وعلوم الجيولوجيا والمحيطات والمناخ.</p>
+          <p data-i18n="about_p2">تشكّلت السواحل عبر ملايين السنين من خلال تفاعل معقد بين قوى جيولوجية تكتونية وتغيرات في مستوى البحر والعمليات الهيدروديناميكية للأمواج والمد والجزر والعوامل المناخية والبيولوجية.</p>
+          <div class="eric-card">
+            <div class="eric-avatar">&#127891;</div>
+            <div class="eric-info">
+              <h4>Eric C.F. Bird (1930 – 2023)</h4>
+              <p data-i18n="eric_desc">عالم الجيومورفولوجيا الأسترالي البريطاني الرائد، مؤلف الكتاب المرجعي الأشهر: "Coastal Geomorphology: An Introduction" — المرجع الأكاديمي العالمي الأول في دراسة الأشكال الأرضية الساحلية.</p>
+            </div>
+          </div>
+          <div class="features-row">
+            <div class="feat"><span>&#127754;</span><span data-i18n="f1">دراسة الأمواج والمد</span></div>
+            <div class="feat"><span>&#9968;&#65039;</span><span data-i18n="f2">تحليل الأشكال الأرضية</span></div>
+            <div class="feat"><span>&#128300;</span><span data-i18n="f3">فهم العمليات الجيولوجية</span></div>
+            <div class="feat"><span>&#127758;</span><span data-i18n="f4">رصد التغير المناخي</span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=700&q=85" alt="Coastal cliffs" loading="lazy">
+            <div class="img-badge top-badge"><span>&#128507;</span><div><strong>150م+</strong><small data-i18n="ibadge1">ارتفاع الجروف الساحلية</small></div></div>
+            <div class="img-badge bot-badge"><span>&#127777;&#65039;</span><div><strong>+1.1°C</strong><small data-i18n="ibadge2">ارتفاع حرارة المحيطات</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="processes" class="section dark-section">
+    <div class="container">
+      <div class="sec-header light">
+        <span class="sec-tag glow" data-i18n="proc_tag">الديناميكيات الساحلية</span>
+        <h2 data-i18n="proc_title">العمليات الساحلية الكبرى</h2>
+        <p data-i18n="proc_lead">القوى الطبيعية التي تُنحت وتُرسب وتُشكّل سواحل العالم</p>
+      </div>
+      <div class="processes-grid">
+        <div class="proc-card">
+          <div class="proc-icon-box wave-box">
+            <svg viewBox="0 0 80 50" class="proc-svg"><path class="animated-wave" d="M0,25 C20,5 40,45 60,25 C70,15 75,30 80,25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M0,35 C15,15 35,55 55,35 C65,25 73,40 80,35" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+          </div>
+          <h3 data-i18n="proc1_title">فعل الأمواج</h3>
+          <p data-i18n="proc1_desc">الأمواج العامل الأول في النحت الساحلي. تعمل عبر أربع آليات: الضغط الهيدروليكي، التجريف، التآكل التبادلي، والتحليل الكيميائي للصخور الجيرية.</p>
+          <ul class="proc-list">
+            <li data-i18n="pw1">&#9889; الفعل الهيدروليكي</li>
+            <li data-i18n="pw2">&#129704; التجريف (Abrasion)</li>
+            <li data-i18n="pw3">&#128142; التآكل التبادلي</li>
+            <li data-i18n="pw4">&#9879;&#65039; التحليل الكيميائي</li>
+          </ul>
+        </div>
+        <div class="proc-card">
+          <div class="proc-icon-box tide-box">
+            <div class="tide-anim">
+              <div class="tide-fill"></div>
+              <div class="tide-label-hi" data-i18n="tide_hi">مد</div>
+              <div class="tide-label-lo" data-i18n="tide_lo">جزر</div>
+            </div>
+          </div>
+          <h3 data-i18n="proc2_title">المد والجزر</h3>
+          <p data-i18n="proc2_desc">تتحكم دورات المد والجزر في نطاق التأثير الساحلي ورقعة المناطق المُعرَّضة للأمواج، وتؤدي دوراً محورياً في ديناميكيات المصبات والسهول الساحلية.</p>
+          <ul class="proc-list">
+            <li data-i18n="pt1">&#127765; المد الربيعي العالي</li>
+            <li data-i18n="pt2">&#127761; المد الهلالي المنخفض</li>
+            <li data-i18n="pt3">&#127946; منطقة المد بين الجزر</li>
+            <li data-i18n="pt4">&#127807; ديناميكيات المصبات</li>
+          </ul>
+        </div>
+        <div class="proc-card">
+          <div class="proc-icon-box drift-box">
+            <svg viewBox="0 0 80 50" class="proc-svg"><line x1="8" y1="40" x2="72" y2="40" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M10,10 L35,40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30,10 L55,40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M50,10 L72,35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="68,28 76,38 60,38" fill="currentColor" opacity="0.8"/></svg>
+          </div>
+          <h3 data-i18n="proc3_title">الانجراف الساحلي الطولي</h3>
+          <p data-i18n="proc3_desc">الانجراف الطولي (Longshore Drift) هو النقل التدريجي للرواسب على طول الشاطئ بفعل الأمواج المائلة، ويبني الرصفات الرملية والحواجز الساحلية.</p>
+          <ul class="proc-list">
+            <li data-i18n="pd1">&#127754; جريان الموجة للشاطئ</li>
+            <li data-i18n="pd2">&#8617;&#65039; الجريان العكسي للبحر</li>
+            <li data-i18n="pd3">&#127965; تشكيل الرصفات الرملية</li>
+            <li data-i18n="pd4">&#128679; بناء الحواجز الساحلية</li>
+          </ul>
+        </div>
+        <div class="proc-card">
+          <div class="proc-icon-box sed-box">
+            <div class="sed-anim">
+              <div class="sed-p sp1"></div><div class="sed-p sp2"></div><div class="sed-p sp3"></div><div class="sed-p sp4"></div><div class="sed-p sp5"></div>
+            </div>
+          </div>
+          <h3 data-i18n="proc4_title">نقل الرواسب</h3>
+          <p data-i18n="proc4_desc">تُنقل الرواسب الساحلية عبر ثلاث طرق: الحمل العالق في عمود المياه، الزحف القاعي على القاع، والطفر الرملي عبر قفزات صغيرة متكررة.</p>
+          <ul class="proc-list">
+            <li data-i18n="ps1">&#128167; الحمل العالق (Suspension)</li>
+            <li data-i18n="ps2">&#129704; الحمل القاعي (Bedload)</li>
+            <li data-i18n="ps3">&#128260; الطفر الرملي (Saltation)</li>
+            <li data-i18n="ps4">&#128205; الترسيب النهائي</li>
+          </ul>
+        </div>
+        <div class="proc-card">
+          <div class="proc-icon-box ero-box">
+            <svg viewBox="0 0 80 60" class="proc-svg"><rect x="25" y="5" width="45" height="45" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><path d="M0,48 C15,35 25,55 40,45 C52,37 60,52 70,45 C75,42 78,47 80,45" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="proc5_title">عمليات النحت الساحلي</h3>
+          <p data-i18n="proc5_desc">النحت عملية مستمرة تُزيل المواد من الساحل. تعتمد شدتها على طبيعة الصخور وزاوية الشاطئ وعمق المياه وقوة العواصف الموسمية.</p>
+          <ul class="proc-list">
+            <li data-i18n="pe1">&#127754; النحت البحري المباشر</li>
+            <li data-i18n="pe2">&#127749; التجوية الجوية</li>
+            <li data-i18n="pe3">&#11015;&#65039; الانهيارات الكتلية</li>
+            <li data-i18n="pe4">&#129408; النحت البيولوجي</li>
+          </ul>
+        </div>
+        <div class="proc-card">
+          <div class="proc-icon-box dep-box">
+            <svg viewBox="0 0 80 60" class="proc-svg"><path d="M5,20 Q40,5 75,20 L80,60 L0,60 Z" fill="currentColor" opacity="0.15"/><path d="M5,30 Q40,15 75,30 L75,60 L5,60 Z" fill="currentColor" opacity="0.3"/><path d="M5,45 Q40,30 75,45 L75,60 L5,60 Z" fill="currentColor" opacity="0.5"/></svg>
+          </div>
+          <h3 data-i18n="proc6_title">الترسيب والتراكم</h3>
+          <p data-i18n="proc6_desc">يحدث الترسيب حين تفقد الأمواج والتيارات طاقتها الحركية، فتلقي حمولتها من الرواسب مكوّنةً الشواطئ والدلتاوات والكثبان الساحلية.</p>
+          <ul class="proc-list">
+            <li data-i18n="pde1">&#127946; تشكيل الشواطئ الرملية</li>
+            <li data-i18n="pde2">&#127756; بناء دلتاوات الأنهار</li>
+            <li data-i18n="pde3">&#127797; تكوين الكثبان الساحلية</li>
+            <li data-i18n="pde4">&#127807; المستنقعات الملحية</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="landforms" class="section">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag" data-i18n="lf_tag">التضاريس والمشاهد الساحلية</span>
+        <h2 data-i18n="lf_title">الأشكال الأرضية الساحلية</h2>
+        <p data-i18n="lf_lead">تنوع مذهل في الأشكال والتضاريس على امتداد سواحل كوكبنا</p>
+      </div>
+      <div class="lf-filter-bar">
+        <button class="lf-filter active" data-filter="all" data-i18n="filter_all">الكل</button>
+        <button class="lf-filter" data-filter="erosion" data-i18n="filter_erosion">نحت</button>
+        <button class="lf-filter" data-filter="deposition" data-i18n="filter_dep">ترسيب</button>
+        <button class="lf-filter" data-filter="biological" data-i18n="filter_bio">بيولوجي</button>
+        <button class="lf-filter" data-filter="mixed" data-i18n="filter_mixed">مختلط</button>
+      </div>
+      <div class="lf-grid" id="lfGrid">
+        <div class="lf-card" data-cat="erosion" onclick="openModal('cliffs')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=500&q=80" alt="Coastal Cliffs" loading="lazy"><span class="lf-badge erosion-badge" data-i18n="badge_ero">نحت</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf1_title">الجروف الساحلية</h3><p data-i18n="lf1_desc">منحدرات صخرية شبه عمودية تتشكّل بفعل نحت الأمواج للشواطئ الصخرية الصلبة على مدى آلاف السنين.</p></div>
+        </div>
+        <div class="lf-card" data-cat="erosion" onclick="openModal('arches')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=500&q=80" alt="Sea Arches" loading="lazy"><span class="lf-badge erosion-badge" data-i18n="badge_ero">نحت</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf2_title">الأقواس والأعمدة البحرية</h3><p data-i18n="lf2_desc">تتشكّل عبر تقدم نحت الجروف من الجانبين حتى تتقابل، مكوّنةً أقواساً تنهار مع الوقت لتترك أعمدة صخرية منعزلة.</p></div>
+        </div>
+        <div class="lf-card" data-cat="deposition" onclick="openModal('beaches')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80" alt="Sandy Beach" loading="lazy"><span class="lf-badge dep-badge" data-i18n="badge_dep">ترسيب</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf3_title">الشواطئ الرملية</h3><p data-i18n="lf3_desc">تراكمات من الرمل والحصى في المنطقة الساحلية، تتغير ملامحها مع كل موسم وعاصفة في دورة لا تنتهي.</p></div>
+        </div>
+        <div class="lf-card" data-cat="deposition" onclick="openModal('dunes')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=80" alt="Coastal Sand Dunes" loading="lazy"><span class="lf-badge dep-badge" data-i18n="badge_dep">ترسيب</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf4_title">الكثبان الرملية الساحلية</h3><p data-i18n="lf4_desc">تلال من الرمل الجافّ تشكّلها رياح البحر خلف الشواطئ، وتُمثّل حاجزاً طبيعياً مهماً ضد الفيضانات.</p></div>
+        </div>
+        <div class="lf-card" data-cat="mixed" onclick="openModal('estuaries')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?w=500&q=80" alt="Estuary" loading="lazy"><span class="lf-badge mix-badge" data-i18n="badge_mix">مختلط</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf5_title">المصبات النهرية</h3><p data-i18n="lf5_desc">مناطق التقاء مياه الأنهار العذبة بمياه البحر المالحة، وتُعدّ من أكثر النظم البيئية إنتاجيةً على وجه الأرض.</p></div>
+        </div>
+        <div class="lf-card" data-cat="deposition" onclick="openModal('deltas')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&q=80" alt="River Delta" loading="lazy"><span class="lf-badge dep-badge" data-i18n="badge_dep">ترسيب</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf6_title">الدلتاوات النهرية</h3><p data-i18n="lf6_desc">تُبنى على مدى آلاف السنين من الرواسب التي تنقلها الأنهار، وتُعدّ من أخصب الأراضي الزراعية في العالم.</p></div>
+        </div>
+        <div class="lf-card" data-cat="biological" onclick="openModal('coral')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=500&q=80" alt="Coral Reef" loading="lazy"><span class="lf-badge bio-badge" data-i18n="badge_bio">بيولوجي</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf7_title">الشعاب المرجانية</h3><p data-i18n="lf7_desc">النظم البيئية الأكثر تنوعاً في المحيطات، تبنيها حيوانات مرجانية صغيرة عبر آلاف السنين وتوفر غذاءً لـ 25% من الأسماك.</p></div>
+        </div>
+        <div class="lf-card" data-cat="mixed" onclick="openModal('lagoons')">
+          <div class="lf-img"><img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=500&q=80" alt="Coastal Lagoon" loading="lazy"><span class="lf-badge mix-badge" data-i18n="badge_mix">مختلط</span><div class="lf-hover"><span data-i18n="more_info">&#128269; تفاصيل أكثر</span></div></div>
+          <div class="lf-body"><h3 data-i18n="lf8_title">البحيرات الساحلية (اللاجون)</h3><p data-i18n="lf8_desc">مسطحات مائية شبه مغلقة يفصلها عن البحر حواجز رملية أو شعاب مرجانية. بيئات غنية ومنتجة.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()" id="modalBox">
+      <button class="modal-close-btn" onclick="closeModal()">&#10005;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <section id="sealevel" class="section dark-section">
+    <div class="container">
+      <div class="sec-header light">
+        <span class="sec-tag glow" data-i18n="sl_tag">المحيطات في تحوّل</span>
+        <h2 data-i18n="sl_title">تغيرات مستوى سطح البحر</h2>
+        <p data-i18n="sl_lead">أحد أعمق التحديات التي تواجه المجتمعات الساحلية في القرن الحادي والعشرين</p>
+      </div>
+      <div class="sl-layout">
+        <div class="sl-chart-wrap">
+          <h4 class="chart-label" data-i18n="chart_title">ارتفاع مستوى البحر العالمي (1900–2024)</h4>
+          <canvas id="seaChart" width="560" height="320"></canvas>
+        </div>
+        <div class="sl-causes">
+          <h3 data-i18n="causes_h">أسباب الارتفاع</h3>
+          <div class="cause-card">
+            <div class="cause-ico">&#127777;&#65039;</div>
+            <div><h4 data-i18n="c1h">التمدد الحراري للمحيطات</h4><p data-i18n="c1p">ارتفاع حرارة مياه البحر يجعلها تتمدد وترتفع — مسؤول عن نحو 40% من الارتفاع الإجمالي.</p><div class="cause-pct"><div class="pct-bar" style="width:40%"></div><span>40%</span></div></div>
+          </div>
+          <div class="cause-card">
+            <div class="cause-ico">&#129482;</div>
+            <div><h4 data-i18n="c2h">ذوبان الأنهار والصفائح الجليدية</h4><p data-i18n="c2p">تذوب أنهار غرينلاند والقطب الجنوبي الجليدية بسرعة غير مسبوقة مضيفةً مياهاً هائلة.</p><div class="cause-pct"><div class="pct-bar" style="width:45%"></div><span>45%</span></div></div>
+          </div>
+          <div class="cause-card">
+            <div class="cause-ico">&#127956;&#65039;</div>
+            <div><h4 data-i18n="c3h">الهبوط التكتوني للسواحل</h4><p data-i18n="c3p">حركة الصفائح التكتونية وضخ المياه الجوفية تُهبط بعض السواحل مما يضاعف الارتفاع النسبي للبحر.</p><div class="cause-pct"><div class="pct-bar" style="width:15%"></div><span>15%</span></div></div>
+          </div>
+          <div class="sl-warning">
+            <span>&#9888;&#65039;</span>
+            <p data-i18n="sl_warn">يُتوقع ارتفاع مستوى البحر بين <strong>0.3 و 1.0 متر</strong> بحلول عام 2100، مما يُهدد مئات الملايين في المناطق الساحلية المنخفضة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" class="section">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag" data-i18n="vid_tag">التعلم المرئي</span>
+        <h2 data-i18n="vid_title">فيديوهات علمية مختارة</h2>
+        <p data-i18n="vid_lead">مقاطع تعليمية متميزة لفهم أعمق لعلم الجيومورفولوجيا الساحلية</p>
+      </div>
+      <div class="vid-tabs">
+        <button class="vtab active" data-vtab="all" data-i18n="vtab_all">الكل</button>
+        <button class="vtab" data-vtab="processes" data-i18n="vtab_proc">العمليات</button>
+        <button class="vtab" data-vtab="landforms" data-i18n="vtab_lf">التضاريس</button>
+        <button class="vtab" data-vtab="climate" data-i18n="vtab_climate">المناخ</button>
+      </div>
+      <div class="vid-grid" id="vidGrid">
+        <div class="vid-card" data-vtopic="processes">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/DvK7kbUjToo?rel=0" title="Coastal Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip process-chip" data-i18n="chip_proc">العمليات</span><h4 data-i18n="v1t">العمليات الساحلية - المقدمة الشاملة</h4><p data-i18n="v1d">شرح تفصيلي لأبرز العمليات الجيومورفولوجية التي تعمل على تشكيل السواحل</p></div>
+        </div>
+        <div class="vid-card" data-vtopic="landforms">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/WRfu_LPNHXM?rel=0" title="Coastal Landforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip lf-chip" data-i18n="chip_lf">التضاريس</span><h4 data-i18n="v2t">الجروف والأشكال الساحلية المنحوتة</h4><p data-i18n="v2d">كيف تُقوّض الأمواج الصخور الساحلية لتُشكّل الجروف والكهوف والأقواس البحرية</p></div>
+        </div>
+        <div class="vid-card" data-vtopic="landforms">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/uSX5ISbDLZU?rel=0" title="Beach Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip lf-chip" data-i18n="chip_lf">التضاريس</span><h4 data-i18n="v3t">ديناميكيات الشواطئ والكثبان الرملية</h4><p data-i18n="v3d">دراسة مصورة لكيفية بناء الشواطئ وتطور الكثبان الرملية الساحلية</p></div>
+        </div>
+        <div class="vid-card" data-vtopic="climate">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/kqkFLkiZFhg?rel=0" title="Sea Level Rise" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip climate-chip" data-i18n="chip_climate">المناخ</span><h4 data-i18n="v4t">ارتفاع مستوى البحر - الأسباب والتوقعات</h4><p data-i18n="v4d">تحليل علمي لظاهرة ارتفاع مستوى البحر وتأثيراتها على السواحل بحلول 2100</p></div>
+        </div>
+        <div class="vid-card" data-vtopic="processes">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/FxmWqBhTMWI?rel=0" title="Wave Action" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip process-chip" data-i18n="chip_proc">العمليات</span><h4 data-i18n="v5t">فعل الأمواج والنحت الساحلي</h4><p data-i18n="v5d">شرح مصور لآليات نحت الأمواج وكيفية تشكيلها للتضاريس الساحلية عبر الزمن</p></div>
+        </div>
+        <div class="vid-card" data-vtopic="climate">
+          <div class="vid-wrap"><iframe src="https://www.youtube.com/embed/y9rKVeJjFJQ?rel=0" title="Coastal Erosion Climate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="vid-body"><span class="vid-chip climate-chip" data-i18n="chip_climate">المناخ</span><h4 data-i18n="v6t">النحت الساحلي والتغير المناخي</h4><p data-i18n="v6d">دراسة أثر التغير المناخي في تسريع النحت الساحلي وفقدان الأراضي الشاطئية</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="section dark-section">
+    <div class="container">
+      <div class="sec-header light">
+        <span class="sec-tag glow" data-i18n="imp_tag">التأثير البشري</span>
+        <h2 data-i18n="imp_title">الإنسان والبيئة الساحلية</h2>
+        <p data-i18n="imp_lead">النشاط البشري يُغير شكل السواحل بسرعة تفوق أي عملية طبيعية</p>
+      </div>
+      <div class="impact-grid">
+        <div class="imp-card danger-card">
+          <div class="imp-icon">&#127959;&#65039;</div>
+          <h3 data-i18n="i1t">التطوير الساحلي المكثف</h3>
+          <p data-i18n="i1p">البناء على الشواطئ وإنشاء الموانئ والأرصفة يُغير مسار تدفق الرواسب الطبيعي ويُسرّع النحت في مناطق مجاورة فاقدةً لحمايتها الطبيعية.</p>
+          <div class="imp-metric"><span class="metric-n">50%</span><span data-i18n="i1s">من الشواطئ العالمية في تراجع</span></div>
+        </div>
+        <div class="imp-card warning-card">
+          <div class="imp-icon">&#128737;&#65039;</div>
+          <h3 data-i18n="i2t">إدارة وحماية السواحل</h3>
+          <p data-i18n="i2p">تُستخدم عدة استراتيجيات: الجدران البحرية، المصدات الحجرية، إعادة تغذية الشواطئ بالرمل، والحمايات البيئية والمحميات الطبيعية الساحلية.</p>
+          <div class="imp-metric"><span class="metric-n">$50B</span><span data-i18n="i2s">تكلفة الحماية الساحلية سنوياً</span></div>
+        </div>
+        <div class="imp-card info-card">
+          <div class="imp-icon">&#127758;</div>
+          <h3 data-i18n="i3t">تغيّر المناخ العالمي</h3>
+          <p data-i18n="i3p">يُهدد ارتفاع مستوى البحر وتصاعد شدة العواصف مئات الملايين من سكان المناطق الساحلية المنخفضة الذين يواجهون خطر الفيضانات والهجرة القسرية.</p>
+          <div class="imp-metric"><span class="metric-n">1B</span><span data-i18n="i3s">شخص مهدد بارتفاع منسوب البحر</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="section">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag" data-i18n="quiz_tag">اختبر معلوماتك</span>
+        <h2 data-i18n="quiz_title">اختبار الجيومورفولوجيا الساحلية</h2>
+        <p data-i18n="quiz_lead">هل تتقن علم الجيومورفولوجيا الساحلية؟ اختبر نفسك الآن!</p>
+      </div>
+      <div class="quiz-wrap" id="quizWrap">
+        <div class="quiz-top">
+          <div class="qprog-track"><div class="qprog-bar" id="qprogBar"></div></div>
+          <span class="q-counter" id="qCounter"></span>
+        </div>
+        <div id="quizBody"></div>
+        <div id="quizResult" class="quiz-result" style="display:none"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">&#127754; <span data-i18n="footer_brand">الجيومورفولوجيا الساحلية</span></div>
+          <p data-i18n="footer_about">بوابة علمية تفاعلية شاملة لدراسة وفهم الجيومورفولوجيا الساحلية — تكريماً للعالم العظيم Eric C.F. Bird</p>
+          <div class="footer-langs">
+            <button onclick="setLang('ar')" class="flang-btn">&#127762;</button>
+            <button onclick="setLang('en')" class="flang-btn">&#127468;&#127463;</button>
+            <button onclick="setLang('fr')" class="flang-btn">&#127467;&#127479;</button>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav">التنقل السريع</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav_about">حول العلم</a></li>
+            <li><a href="#processes" data-i18n="nav_processes">العمليات</a></li>
+            <li><a href="#landforms" data-i18n="nav_landforms">التضاريس</a></li>
+            <li><a href="#sealevel" data-i18n="nav_sea">مستوى البحر</a></li>
+            <li><a href="#videos" data-i18n="nav_videos">الفيديوهات</a></li>
+            <li><a href="#quiz" data-i18n="nav_quiz">الاختبار</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_refs">مراجع علمية</h4>
+          <ul>
+            <li><a href="#">Coastal Geomorphology - Eric Bird</a></li>
+            <li><a href="#">Journal of Coastal Research</a></li>
+            <li><a href="#">IPCC Coastal Assessment Reports</a></li>
+            <li><a href="#">NOAA Coastal Science Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nl">النشرة العلمية</h4>
+          <p data-i18n="footer_nl_desc">اشترك لتلقّي أحدث الأبحاث في الجيومورفولوجيا الساحلية</p>
+          <form class="nl-form" onsubmit="return false;"><input type="email" id="nlEmail" placeholder="بريدك الإلكتروني"><button type="submit" data-i18n="subscribe">اشترك</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer_copy">© 2024 بوابة الجيومورفولوجيا الساحلية — جميع الحقوق محفوظة</p>
+        <p data-i18n="footer_ded">مُهدى لذكرى العالم Eric C.F. Bird (1930–2023) &#127891;</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
