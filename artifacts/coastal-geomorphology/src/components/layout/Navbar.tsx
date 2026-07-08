@@ -11,6 +11,7 @@ const navItems = [
   { id: 'sea-level', label: 'مستوى البحر' },
   { id: 'videos', label: 'فيديوهات' },
   { id: 'review', label: 'المراجعة' },
+  { id: 'book-summary', label: 'الملخص الشامل' },
   { id: 'quiz', label: 'اختبر معلوماتك' },
 ];
 

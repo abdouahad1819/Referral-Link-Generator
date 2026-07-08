@@ -1,11 +1,11 @@
-import { Waves } from 'lucide-react';
+import { Waves, User } from 'lucide-react';
 
 export function Footer() {
   return (
     <footer className="bg-card border-t border-border pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
+
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="p-2 bg-primary/10 rounded-lg text-primary">
@@ -15,9 +15,19 @@ export function Footer() {
                 الجيومورفولوجيا الساحلية
               </span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              بوابة تعليمية مخصصة لتبسيط ونشر علوم الأرض الساحلية في العالم العربي، بالاستناد إلى المرجع الأكاديمي "Coastal Geomorphology: An Introduction" للعالم إريك بيرد.
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
+              بوابة تعليمية مخصصة لتبسيط ونشر علوم الأرض الساحلية في العالم العربي، بالاستناد إلى المرجع الأكاديمي "Coastal Geomorphology: An Introduction" للعالم إريك بيرد (الطبعة الثانية، 2008).
             </p>
+            {/* Page Owner Card */}
+            <div className="flex items-center gap-3 bg-background/60 border border-border rounded-xl p-4 w-fit">
+              <div className="p-2 bg-primary/10 rounded-full text-primary">
+                <User className="w-4 h-4" />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">صاحب الصفحة</p>
+                <p className="text-white font-bold text-sm">عبد الاحد ديان</p>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -27,15 +37,16 @@ export function Footer() {
               <li><a href="#book" className="hover:text-primary transition-colors">فصول الكتاب</a></li>
               <li><a href="#processes" className="hover:text-primary transition-colors">العمليات الساحلية</a></li>
               <li><a href="#landforms" className="hover:text-primary transition-colors">الأشكال الأرضية</a></li>
+              <li><a href="#sea-level" className="hover:text-primary transition-colors">مستوى البحر</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">مصادر</h4>
+            <h4 className="text-white font-bold mb-6">مصادر ومراجعة</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#sea-level" className="hover:text-primary transition-colors">مستوى البحر</a></li>
               <li><a href="#videos" className="hover:text-primary transition-colors">فيديوهات علمية</a></li>
               <li><a href="#review" className="hover:text-primary transition-colors">مراجعة الكتاب</a></li>
+              <li><a href="#book-summary" className="hover:text-primary transition-colors">الملخص الشامل</a></li>
               <li><a href="#quiz" className="hover:text-primary transition-colors">اختبر معلوماتك</a></li>
             </ul>
           </div>
@@ -46,8 +57,13 @@ export function Footer() {
           <p>
             تخليداً لذكرى إريك بيرد (1930–2023) وإسهاماته في علوم السواحل.
           </p>
-          <div className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
-            موقع تعليمي غير ربحي
+          <div className="flex items-center gap-3">
+            <span className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
+              موقع تعليمي غير ربحي
+            </span>
+            <span className="px-3 py-1 bg-primary/10 rounded-full border border-primary/20 text-primary font-medium">
+              عبد الاحد ديان
+            </span>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { Landforms } from '@/components/sections/Landforms';
 import { SeaLevel } from '@/components/sections/SeaLevel';
 import { Videos } from '@/components/sections/Videos';
 import { Review } from '@/components/sections/Review';
+import { BookSummary } from '@/components/sections/BookSummary';
 import { Quiz } from '@/components/sections/Quiz';
 import { Footer } from '@/components/layout/Footer';
 
@@ -23,6 +24,7 @@ export default function Home() {
         <SeaLevel />
         <Videos />
         <Review />
+        <BookSummary />
         <Quiz />
       </main>
       <Footer />
